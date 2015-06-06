@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Where are we</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script>
+    function initialize() {
+      var posisi = new google.maps.LatLng(-7.795173, 110.365577);
+      var pengaturan = {
+        zoom: 8,
+        center: posisi
+      }
+      var map = new google.maps.Map(document.getElementById('peta'), pengaturan);
+ 
+      var tanda = new google.maps.Marker({
+         map: map,
+        position: posisi,
+       
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <style>
+    h1{
+      text-align: center;
+    }
+    #peta {
+      height: 300px;
+      width: 650px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+	<h1 style="text-align:center" >WHERE ARE WE</h1>
+
+	<pre style="text-align:center">
+	We sell our product in almost every part of indonesia 
+	cause we want to make sure everyone got a pure and clean water to drink</pre>
+	<div id="peta"></div>
+
+</body>
+</html>
